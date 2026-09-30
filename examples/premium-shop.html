@@ -1,0 +1,179 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kopi Roast — Premium package example by Rasel Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&display=swap" rel="stylesheet">
+<style>:root{--bg:#FBF7F2;--ink:#24160F;--muted:#76655A;--pri:#3B2418;--acc:#F2B544;--soft:#F2E7DA;--card:#fff;--line:#E9DDCF;--hf:"Sora",system-ui,sans-serif;--bf:"Sora",system-ui,sans-serif;--hw:700;--hls:-.03em;--r:18px;--br:12px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--bf);line-height:1.6;font-size:1.02rem;-webkit-font-smoothing:antialiased}
+a{color:inherit}img{max-width:100%}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.w{max-width:1160px;margin:0 auto;padding:0 28px}
+h1,h2,h3,h4{font-family:var(--hf);line-height:1.1;margin:0 0 .5em;font-weight:var(--hw,700);letter-spacing:var(--hls,-.01em)}
+h1{font-size:clamp(2.4rem,5.5vw,var(--h1,4rem))}h2{font-size:clamp(1.8rem,3.6vw,2.7rem)}h3{font-size:1.2rem}
+p{margin:0 0 1em}.mut{color:var(--muted)}
+.art{width:100%;min-height:120px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 26px;border-radius:var(--br,999px);background:var(--pri);color:var(--onpri,#fff);font-weight:700;text-decoration:none;border:2px solid var(--pri);font-family:var(--bf);font-size:1rem;cursor:pointer}
+.btn.alt{background:transparent;color:var(--pri)}
+.btn.acc{background:var(--acc);border-color:var(--acc);color:var(--onacc,#111)}
+.btn.sm{padding:8px 16px;font-size:.9rem}
+section{padding:88px 0}
+.sh{max-width:640px;margin-bottom:40px}.sh.c{margin-left:auto;margin-right:auto;text-align:center}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r,16px);overflow:hidden}
+.soft{background:var(--soft)}
+.dark{background:var(--pri);color:var(--onpri,#fff)}.dark .mut{color:var(--onpri-m,rgba(255,255,255,.75))}
+.grid{display:grid;gap:24px}.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:860px){.g3,.g4{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}}
+@media(max-width:560px){.g3,.g4{grid-template-columns:1fr}}
+/* demo bar */
+.xbar{background:#23265E;color:#fff;font:500 .92rem/1.4 "Bricolage Grotesque",system-ui,sans-serif}
+.xbar .w{display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:space-between;align-items:center;padding-top:9px;padding-bottom:9px}
+.xbar b{color:#F2A93B}.xbar nav{display:flex;gap:6px;flex-wrap:wrap}
+.xbar a{text-decoration:none;padding:4px 12px;border-radius:999px;background:rgba(255,255,255,.12)}
+/* nav */
+.nav{border-bottom:1px solid var(--line);background:var(--navbg,var(--bg));position:sticky;top:0;z-index:9}
+.nav .w{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+.brand{font-family:var(--hf);font-weight:var(--bw,800);font-size:1.45rem;text-decoration:none;display:flex;align-items:center;gap:10px;letter-spacing:-.01em}
+.brand i{width:30px;height:30px;border-radius:9px;background:var(--pri);display:inline-block;position:relative}
+.brand i::after{content:"";position:absolute;inset:8px;border-radius:50%;background:var(--acc)}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-weight:500;color:var(--muted)}
+.nav .right{display:flex;gap:14px;align-items:center}
+.icon-btn{position:relative;font-weight:600;color:var(--ink);text-decoration:none}
+.icon-btn span{position:absolute;top:-8px;right:-12px;background:var(--acc);color:var(--onacc,#111);font-size:.7rem;border-radius:999px;padding:1px 6px;font-weight:800}
+@media(max-width:860px){.nav ul{display:none}}
+/* hero */
+.hero{padding:84px 0}
+.hero.split .w{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero .lead{font-size:1.2rem;max-width:40ch}
+.hero .acts{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+.hero.overlay{position:relative;color:#fff;padding:130px 0 110px;overflow:hidden}
+.hero.overlay>.art{position:absolute;inset:0;height:100%}
+.hero.overlay::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.25));z-index:1}
+.hero.overlay .w{position:relative;z-index:2}.hero.overlay .lead{color:rgba(255,255,255,.85)}
+.hero.center{text-align:center}.hero.center .lead{margin:0 auto}.hero.center .acts{justify-content:center}
+.hero.center .strip{margin-top:56px;display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:18px}
+.hero.big h1{font-size:clamp(3.4rem,9vw,7.4rem);line-height:.92;letter-spacing:-.03em}
+.herostats{display:flex;gap:44px;margin-top:48px;flex-wrap:wrap}.herostats b{display:block;font-size:2.2rem;font-family:var(--hf)}
+.searchbox{margin-top:30px;background:#fff;color:#222;border-radius:18px;padding:10px;display:grid;grid-template-columns:repeat(3,1fr) auto;gap:8px;box-shadow:0 20px 40px -20px rgba(0,0,0,.35);max-width:820px}
+.searchbox div{padding:8px 14px;border-right:1px solid #eee}.searchbox small{display:block;color:#888;font-size:.78rem}.searchbox b{font-size:.98rem}
+.hero.center .searchbox{margin-left:auto;margin-right:auto;text-align:left}
+@media(max-width:860px){.hero.split .w{grid-template-columns:1fr}.searchbox{grid-template-columns:1fr 1fr}}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.stats b{display:block;font-family:var(--hf);font-size:2.6rem;line-height:1.1;color:var(--pri)}
+.dark .stats b{color:var(--acc)}
+/* feature cards */
+.feat{padding:28px}.feat .ic{width:48px;height:48px;border-radius:14px;background:var(--soft);margin-bottom:18px;position:relative}
+.feat .ic::after{content:"";position:absolute;inset:14px;border-radius:5px;background:var(--pri);opacity:.85}
+.feat p{margin:0;color:var(--muted)}
+/* about */
+.about .w{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.ticks{list-style:none;padding:0;margin:18px 0 0}.ticks li{padding:8px 0 8px 30px;position:relative}
+.ticks li::before{content:"";position:absolute;left:0;top:14px;width:14px;height:8px;border-left:3px solid var(--acc2,var(--pri));border-bottom:3px solid var(--acc2,var(--pri));transform:rotate(-45deg)}
+@media(max-width:860px){.about .w{grid-template-columns:1fr}}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:180px;gap:14px}
+.gal .art{height:100%;border-radius:var(--r,14px)}.gal .t{grid-row:span 2}.gal .wd{grid-column:span 2}
+/* menu */
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:20px 60px}
+.menu h3{grid-column:1/-1;margin-top:18px;color:var(--pri);border-bottom:2px solid var(--line);padding-bottom:8px}
+.mi{display:flex;justify-content:space-between;gap:16px;padding:6px 0}.mi b{font-family:var(--hf)}.mi small{display:block;color:var(--muted)}
+.mi .pr{font-weight:700;color:var(--pri);white-space:nowrap}
+@media(max-width:760px){.menu{grid-template-columns:1fr}}
+/* products */
+.prod .art{border-radius:0}.prod .in{padding:16px 18px 18px}.prod h3{font-size:1.05rem;margin:0 0 4px}
+.prod .pr{font-weight:800;color:var(--pri)}.prod .row{display:flex;justify-content:space-between;align-items:center;margin-top:12px;gap:10px}
+.tag{display:inline-block;font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--soft);color:var(--pri);margin-bottom:8px}
+.shop{display:grid;grid-template-columns:230px 1fr;gap:32px}
+.filters{border:1px solid var(--line);border-radius:var(--r,16px);padding:22px;background:var(--card);align-self:start}
+.filters h4{font-size:1rem;margin:18px 0 10px}.filters h4:first-child{margin-top:0}
+.filters label{display:flex;gap:10px;align-items:center;padding:4px 0;color:var(--muted);font-size:.95rem}
+.filters input[type=checkbox]{accent-color:var(--pri);width:16px;height:16px}
+.range{height:6px;border-radius:9px;background:linear-gradient(90deg,var(--pri) 60%,var(--line) 60%);margin:10px 0}
+@media(max-width:860px){.shop{grid-template-columns:1fr}}
+/* listing */
+.lst .in{padding:18px}.lst .meta{display:flex;gap:16px;color:var(--muted);font-size:.9rem;margin-top:10px;border-top:1px solid var(--line);padding-top:12px}
+.lst .pr{font-size:1.3rem;font-weight:800;color:var(--pri);font-family:var(--hf)}
+/* team */
+.team .art{border-radius:var(--r,16px)}.team h3{margin:14px 0 2px}
+/* quotes */
+.q{padding:30px}.q p{font-size:1.08rem}.q b{display:block}.q small{color:var(--muted)}
+.stars{color:var(--acc);letter-spacing:3px;margin-bottom:10px}
+/* logos */
+.logos{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+.logos span{font-family:var(--hf);font-weight:800;font-size:1.25rem;color:var(--muted);opacity:.75;padding:14px 22px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+/* contact */
+.contact .w{display:grid;grid-template-columns:1fr 1.1fr;gap:48px}
+.info{display:grid;gap:18px;margin-top:20px}.info div{display:flex;gap:14px}.info i{flex:none;width:40px;height:40px;border-radius:12px;background:var(--soft);display:grid;place-items:center;font-style:normal;color:var(--pri);font-weight:800}
+.info b{display:block}.info span{color:var(--muted)}
+.map{position:relative;border-radius:var(--r,16px);overflow:hidden;min-height:340px;background:
+  linear-gradient(0deg,transparent 48%,rgba(255,255,255,.9) 48% 52%,transparent 52%),
+  linear-gradient(90deg,transparent 30%,rgba(255,255,255,.9) 30% 33%,transparent 33%),
+  linear-gradient(35deg,transparent 60%,rgba(255,255,255,.8) 60% 62%,transparent 62%),
+  #DDE6DA;border:1px solid var(--line)}
+.map::after{content:"";position:absolute;left:47%;top:38%;width:30px;height:30px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--acc);box-shadow:0 0 0 6px rgba(255,255,255,.7)}
+.form{display:grid;gap:12px}.form .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fld{border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:#999;background:var(--card);font-size:.95rem}
+.fld.ta{height:110px}
+@media(max-width:860px){.contact .w{grid-template-columns:1fr}}
+/* cta */
+.cta{border-radius:var(--r2,28px);padding:56px;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+/* pricing plans */
+.plan{padding:30px}.plan b.p{font-family:var(--hf);font-size:2.4rem;display:block;margin:8px 0}.plan.hi{border:2px solid var(--pri);transform:translateY(-8px)}
+/* posts */
+.post .in{padding:18px}.post small{color:var(--acc2,var(--pri));font-weight:700}
+.news{display:grid;grid-template-columns:1.6fr 1fr;gap:36px}.news .lead-art{height:380px;border-radius:var(--r,6px)}
+.news .side article{padding:16px 0;border-bottom:1px solid var(--line)}.news .side h3{font-size:1.1rem;margin:4px 0}
+@media(max-width:860px){.news{grid-template-columns:1fr}}
+/* schedule */
+table.sched{width:100%;border-collapse:collapse;background:var(--card);border-radius:var(--r,16px);overflow:hidden}
+.sched th,.sched td{padding:14px 16px;border-bottom:1px solid var(--line);text-align:left}.sched th{background:var(--soft);font-family:var(--hf)}
+/* app promo */
+.app .w{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.phone{width:270px;height:540px;border-radius:40px;background:#111;padding:11px;margin:0 auto;box-shadow:0 30px 60px -25px rgba(0,0,0,.55)}
+.scr{height:100%;border-radius:30px;background:var(--bg);overflow:hidden;display:flex;flex-direction:column}
+.scr .top{background:var(--pri);color:var(--onpri,#fff);padding:28px 16px 16px}.scr .top small{opacity:.8}.scr .top b{display:block;font-family:var(--hf);font-size:1.2rem}
+.scr .body{flex:1;padding:12px;display:grid;gap:10px;align-content:start}
+.scr .it{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px;display:flex;gap:10px;align-items:center;font-size:.85rem}
+.scr .it .art{width:44px;min-height:44px;height:44px;border-radius:10px;flex:none}
+.scr .bn{display:flex;justify-content:space-around;border-top:1px solid var(--line);padding:10px 0 14px;font-size:.7rem;color:var(--muted)}.scr .bn span:first-child{color:var(--pri);font-weight:800}
+.stores{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}.stores span{background:#111;color:#fff;border-radius:12px;padding:10px 18px;font-weight:600}
+@media(max-width:860px){.app .w{grid-template-columns:1fr}}
+/* booking */
+.book{display:grid;grid-template-columns:1.2fr 1fr;gap:28px}
+.cal{padding:24px}.cal .days{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;text-align:center;font-size:.92rem}
+.cal .days span{padding:10px 0;border-radius:10px}.cal .days .h{color:var(--muted);font-size:.8rem}
+.cal .days .on{background:var(--pri);color:var(--onpri,#fff);font-weight:800}.cal .days .off{color:#bbb;text-decoration:line-through}
+.slots{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 20px}.slots span{border:1px solid var(--line);border-radius:10px;padding:8px 14px;font-weight:600}.slots .on{background:var(--acc);border-color:var(--acc);color:var(--onacc,#111)}
+.sum{padding:24px}.sum .row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed var(--line)}
+@media(max-width:860px){.book{grid-template-columns:1fr}}
+/* cart */
+.cartwrap{display:grid;grid-template-columns:1fr 330px;gap:28px;align-items:start}
+.cartp{padding:22px}.cartp .li{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.cartp .li .art{width:56px;min-height:56px;height:56px;border-radius:12px;flex:none}.cartp .li div{flex:1}
+.pay{display:flex;gap:8px;margin:14px 0}.pay span{flex:1;text-align:center;border:1px solid var(--line);border-radius:10px;padding:8px;font-weight:700;font-size:.85rem}
+@media(max-width:860px){.cartwrap{grid-template-columns:1fr}}
+/* course */
+.course .in{padding:18px}.course .meta{display:flex;justify-content:space-between;color:var(--muted);font-size:.9rem;margin-top:10px}
+.player{border-radius:var(--r,18px);overflow:hidden;background:#0d1020;color:#fff;display:grid;grid-template-columns:1.6fr 1fr}
+.player .vid{position:relative;min-height:320px}.player .vid .art{position:absolute;inset:0;height:100%}
+.player .vid::after{content:"";position:absolute;left:50%;top:50%;width:0;height:0;border-left:30px solid #fff;border-top:18px solid transparent;border-bottom:18px solid transparent;transform:translate(-40%,-50%)}
+.player ol{margin:0;padding:22px 22px 22px 44px;display:grid;gap:10px;font-size:.95rem}.player li.d{color:#8f96b8;text-decoration:line-through}.player li.c{color:var(--acc);font-weight:700}
+.bar{height:8px;background:rgba(255,255,255,.15);border-radius:9px;margin:0 22px 22px}.bar i{display:block;height:100%;width:42%;background:var(--acc);border-radius:9px}
+@media(max-width:860px){.player{grid-template-columns:1fr}}
+/* track */
+.track{display:flex;justify-content:space-between;gap:10px;margin-top:20px}.track div{flex:1;text-align:center;font-size:.85rem}
+.track div::before{content:"";display:block;height:6px;border-radius:9px;background:var(--line);margin-bottom:10px}.track .on::before{background:var(--pri)}
+footer.ft{padding:56px 0 36px;border-top:1px solid var(--line)}
+footer.ft .w{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}footer.ft h4{font-size:1rem}footer.ft ul{list-style:none;padding:0;margin:0;color:var(--muted);display:grid;gap:6px}
+footer.ft .cp{grid-column:1/-1;border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:.9rem}
+@media(max-width:760px){footer.ft .w{grid-template-columns:1fr 1fr}}
+</style></head><body>
+<div class="xbar"><div class="w"><span><b>Premium package example</b> · demo website by Rasel Studio</span>
+<nav aria-label="Studio"><a href="../premium.html">Back to Premium examples</a><a href="../index.html#pricing">Pricing</a></nav></div></div>
+<div style="background:#3B2418;color:#F2E7DA;text-align:center;font-size:.88rem;padding:8px">Free delivery in Klang Valley on orders over RM 80 · Roasted every Tuesday and Friday</div><header class="nav"><div class="w"><a class="brand" href="#"><i></i>Kopi Roast</a><ul><li>Shop all</li><li>Single origin</li><li>Blends</li><li>Equipment</li><li>Subscriptions</li></ul><div class="right"><span class="mut" style="font-weight:600">Admin login</span><span class="mut" style="font-weight:600">My account</span><a class="icon-btn" href="#">Cart<span>2</span></a></div></div></header><section class="hero split"><div class="w"><div><span class="tag">New: Sabah Tambunan, washed</span><h1>Freshly roasted Malaysian coffee, at your door in two days</h1><p class="lead mut">Beans from Sabah, Johor and Sumatra, roasted in small batches in Shah Alam and shipped the same week.</p><div class="acts"><span class="btn">Shop coffee</span><span class="btn alt">Start a subscription</span></div></div><div class="art" style="background:radial-gradient(circle at 74% 81%, #F2B544 0 14%, transparent 15%),radial-gradient(ellipse at 81% 52%, #9C5B3Acc 0 30%, transparent 42%),radial-gradient(circle at 84% 74%, #E9CFA6aa 0 11%, transparent 12%),linear-gradient(166deg, #3B2418, #5E3B28);border-radius:24px;aspect-ratio:1;" role="img" aria-label="Photo placeholder"></div></div></section>
+<section style="padding-top:20px"><div class="w"><div style="display:flex;justify-content:space-between;align-items:end;margin-bottom:26px"><h2 style="margin:0">Best sellers</h2><span class="mut">Sort: Most popular ▾</span></div><div class="grid g4"><div class="card prod"><div class="art" style="background:radial-gradient(circle at 49% 38%, #F2B544 0 22%, transparent 23%),radial-gradient(ellipse at 62% 18%, #9C5B3Acc 0 22%, transparent 34%),radial-gradient(circle at 53% 16%, #E9CFA6aa 0 11%, transparent 12%),linear-gradient(164deg, #3B2418, #5E3B28);aspect-ratio:1;" role="img" aria-label="Photo placeholder"></div><div class="in"><span class="tag">Single origin</span><h3>Sabah Tambunan</h3><p class="mut" style="font-size:.88rem;margin:0">Brown sugar, orange, cocoa</p><div class="row"><span class="pr">RM 58</span><span class="btn sm">Add to cart</span></div></div></div><div class="card prod"><div class="art" style="background:radial-gradient(circle at 66% 58%, #F2B544 0 13%, transparent 14%),radial-gradient(ellipse at 75% 46%, #9C5B3Acc 0 31%, transparent 43%),radial-gradient(circle at 65% 15%, #E9CFA6aa 0 16%, transparent 17%),linear-gradient(76deg, #3B2418, #5E3B28);aspect-ratio:1;" role="img" aria-label="Photo placeholder"></div><div class="in"><span class="tag">Blend</span><h3>Kopi Kampung Blend</h3><p class="mut" style="font-size:.88rem;margin:0">Dark roast, bold, for kopi-o</p><div class="row"><span class="pr">RM 39</span><span class="btn sm">Add to cart</span></div></div></div><div class="card prod"><div class="art" style="background:radial-gradient(circle at 42% 46%, #F2B544 0 14%, transparent 15%),radial-gradient(ellipse at 16% 83%, #9C5B3Acc 0 25%, transparent 37%),radial-gradient(circle at 48% 65%, #E9CFA6aa 0 11%, transparent 12%),linear-gradient(249deg, #3B2418, #5E3B28);aspect-ratio:1;" role="img" aria-label="Photo placeholder"></div><div class="in"><span class="tag">Single origin</span><h3>Sumatra Gayo</h3><p class="mut" style="font-size:.88rem;margin:0">Cedar, dark chocolate</p><div class="row"><span class="pr">RM 62</span><span class="btn sm">Add to cart</span></div></div></div><div class="card prod"><div class="art" style="background:radial-gradient(circle at 55% 19%, #F2B544 0 21%, transparent 22%),radial-gradient(ellipse at 54% 70%, #9C5B3Acc 0 26%, transparent 38%),radial-gradient(circle at 78% 31%, #E9CFA6aa 0 17%, transparent 18%),linear-gradient(7deg, #3B2418, #5E3B28);aspect-ratio:1;" role="img" aria-label="Photo placeholder"></div><div class="in"><span class="tag">Blend</span><h3>Espresso House</h3><p class="mut" style="font-size:.88rem;margin:0">Caramel, hazelnut</p><div class="row"><span class="pr">RM 45</span><span class="btn sm">Add to cart</span></div></div></div></div></div></section>
+<section class="soft"><div class="w cartwrap"><div class="card cartp"><h3>Your cart (2 items)</h3><div class="li"><div class="art" style="background:radial-gradient(circle at 30% 73%, #F2B544 0 13%, transparent 14%),radial-gradient(ellipse at 62% 26%, #9C5B3Acc 0 27%, transparent 39%),radial-gradient(circle at 70% 51%, #E9CFA6aa 0 17%, transparent 18%),linear-gradient(252deg, #3B2418, #5E3B28);" role="img" aria-label="Photo placeholder"></div><div><b>Sabah Tambunan</b><br><span class="mut" style="font-size:.88rem">250 g · Whole bean</span></div><span class="mut">Qty 1</span><b style="margin-left:18px">RM 58</b></div><div class="li"><div class="art" style="background:radial-gradient(circle at 21% 44%, #F2B544 0 12%, transparent 13%),radial-gradient(ellipse at 53% 32%, #9C5B3Acc 0 24%, transparent 36%),radial-gradient(circle at 29% 48%, #E9CFA6aa 0 8%, transparent 9%),linear-gradient(186deg, #3B2418, #5E3B28);" role="img" aria-label="Photo placeholder"></div><div><b>Kopi Kampung Blend</b><br><span class="mut" style="font-size:.88rem">500 g · Ground for kopi-o</span></div><span class="mut">Qty 1</span><b style="margin-left:18px">RM 39</b></div><div class="track"><div class="on">Cart</div><div class="on">Delivery</div><div>Payment</div><div>Done</div></div></div>
+<div class="card cartp"><h3>Order summary</h3><div class="sum" style="padding:0"><div class="row"><span class="mut">Subtotal</span><b>RM 97.00</b></div><div class="row"><span class="mut">Delivery</span><b>Free</b></div><div class="row"><span class="mut">Voucher KOPI10</span><b style="color:#2E7D32">− RM 9.70</b></div><div class="row" style="border:0"><b>Total</b><b style="font-size:1.3rem">RM 87.30</b></div></div><div class="pay"><span>Card</span><span>FPX</span><span>PayPal</span><span>GrabPay</span></div><span class="btn" style="width:100%">Pay RM 87.30</span></div></div></section>
+<section class="app soft"><div class="w"><div><span class="tag">Android app on Google Play</span><h2>Reorder your coffee in two taps</h2><p class="mut">The Kopi Roast app uses the same account as the website, so your orders, points and subscriptions follow you.</p><ul class="ticks"><li>Saved addresses and payment</li><li>Live order tracking</li><li>Subscription reminders</li></ul><div class="stores"><span>▶ Get it on Google Play</span></div></div><div class="phone" role="img" aria-label="Android app screen"><div class="scr"><div class="top"><small>Order #KR-2291 · Out for delivery</small><b>Hi, Aina</b></div><div class="body"><div class="it"><div class="art" style="background:radial-gradient(circle at 16% 68%, #F2B544 0 17%, transparent 18%),radial-gradient(ellipse at 57% 71%, #9C5B3Acc 0 30%, transparent 42%),radial-gradient(circle at 38% 49%, #E9CFA6aa 0 11%, transparent 12%),linear-gradient(240deg, #3B2418, #5E3B28);" role="img" aria-label="Photo placeholder"></div><div><b>Sabah Tambunan</b><br><span class="mut">Arrives today</span></div></div><div class="it"><div class="art" style="background:radial-gradient(circle at 45% 21%, #F2B544 0 14%, transparent 15%),radial-gradient(ellipse at 54% 38%, #9C5B3Acc 0 31%, transparent 43%),radial-gradient(circle at 68% 27%, #E9CFA6aa 0 15%, transparent 16%),linear-gradient(13deg, #3B2418, #5E3B28);" role="img" aria-label="Photo placeholder"></div><div><b>Kopi Kampung</b><br><span class="mut">Subscription · next Tue</span></div></div><div class="it"><div class="art" style="background:radial-gradient(circle at 27% 52%, #F2B544 0 18%, transparent 19%),radial-gradient(ellipse at 19% 45%, #9C5B3Acc 0 20%, transparent 32%),radial-gradient(circle at 68% 21%, #E9CFA6aa 0 10%, transparent 11%),linear-gradient(6deg, #3B2418, #5E3B28);" role="img" aria-label="Photo placeholder"></div><div><b>Espresso House</b><br><span class="mut">Rate your last order</span></div></div></div><div class="bn"><span>Home</span><span>Search</span><span>Orders</span><span>Profile</span></div></div></div></div></section><footer class="ft"><div class="w"><div><a class="brand" href="#"><i></i>Kopi Roast</a><p class="mut" style="margin-top:14px">Small-batch roaster in Shah Alam.</p></div><div><h4>Shop</h4><ul><li>Coffee</li><li>Equipment</li><li>Gift cards</li></ul></div><div><h4>Help</h4><ul><li>Track order</li><li>Shipping</li><li>Returns</li></ul></div><div><h4>Company</h4><ul><li>Our roastery</li><li>Wholesale</li><li>Contact</li></ul></div><div class="cp">© 2026 Kopi Roast. Demo website designed and built by Rasel Studio.</div></div></footer>
+</body></html>
