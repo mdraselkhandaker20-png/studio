@@ -53,7 +53,14 @@ th,td{text-align:left;padding:11px 14px;border:1px solid var(--line);vertical-al
 th{background:var(--paper);font-weight:700;color:var(--indigo-deep)}
 .tw{overflow-x:auto}
 .note{font-size:.93rem;color:var(--muted)}
-.fill td:last-child{color:#9A9BB3;font-style:italic}
+.fill td:last-child{color:var(--ink);font-style:normal}
+.fill input,.fill select,.fill textarea{width:100%;font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:9px 12px}
+.fill textarea{resize:vertical}
+.fill input:focus,.fill select:focus,.fill textarea:focus{outline:none;border-color:var(--indigo);background:#fff}
+.fill td{padding:8px 10px}
+.fill-acts{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 8px}
+.btn.wa{background:#1F9D55;border-color:#1F9D55;color:#fff}
+.print-only{display:none}
 .sign{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:22px}
 .sign div{border-top:1.5px solid var(--ink);padding-top:10px;font-size:.95rem}
 .sign span{display:block;color:var(--muted);font-size:.88rem;margin-top:30px;border-top:1px dashed var(--line);padding-top:6px}
@@ -64,11 +71,15 @@ th{background:var(--paper);font-weight:700;color:var(--indigo-deep)}
   @page{size:A4;margin:16mm 15mm}
   body{background:#fff;font-size:10.5pt}
   .top,.toc,.no-print{display:none!important}
+  .print-only{display:block!important}
   .layout{display:block;padding:0;max-width:none}
   .doc{border:0;padding:0;border-radius:0}
   h2{break-after:avoid}
   table,.sign,li{break-inside:avoid}
   a{color:var(--ink);text-decoration:none}
+  .fill input,.fill select,.fill textarea{border:0;border-bottom:1px solid #bbb;border-radius:0;background:none;padding:2px 0;-webkit-appearance:none;appearance:none}
+  .fill textarea{resize:none;overflow:hidden}
+  .fill input::placeholder,.fill textarea::placeholder{color:transparent}
   .intro,th,h2 .n{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 }
 </style>
@@ -123,15 +134,19 @@ th{background:var(--paper);font-weight:700;color:var(--indigo-deep)}
     <p class="intro">This agreement explains how we will work together, what you receive, and how payment works. It is written in plain language so there are no surprises. When you pay the first payment, you agree to these terms.</p>
 
     <h2 id="s1"><span class="n">1</span>Project details</h2>
-    <p>These details are filled in for each project and confirmed by both of us before work starts.</p>
+    <p class="print-only">Project details confirmed by both parties before work starts.</p>
+    <p class="no-print">Fill in your project details below, then press <strong>Download PDF</strong> to keep a copy or <strong>Send on WhatsApp</strong> to send them to me. Nothing is saved on this website.</p>
     <div class="tw"><table class="fill">
-      <tr><th style="width:38%">Client name / business</th><td>To be filled in</td></tr>
-      <tr><th>Package</th><td>Basic / Standard / Premium</td></tr>
-      <tr><th>Website type and design</th><td>For example: Restaurant, Design 3</td></tr>
-      <tr><th>Pages and main features</th><td>To be filled in</td></tr>
-      <tr><th>Total price</th><td>USD</td></tr>
-      <tr><th>Expected delivery</th><td>Number of weeks after first payment and content</td></tr>
+      <tr><th style="width:38%"><label for="f-name">Client name / business</label></th><td><input id="f-name" placeholder="Your name and business name" autocomplete="organization"></td></tr>
+      <tr><th><label for="f-pkg">Package</label></th><td><select id="f-pkg"><option value="basic">Basic</option><option value="standard">Standard</option><option value="premium">Premium</option></select></td></tr>
+      <tr><th><label for="f-type">Website type</label></th><td><select id="f-type"></select></td></tr>
+      <tr><th><label for="f-feat">Pages and main features</label></th><td><textarea id="f-feat" rows="3" placeholder="For example: Home, Menu, About, Gallery, Contact. WhatsApp ordering."></textarea></td></tr>
+      <tr><th><label for="f-price">Total price (USD)</label></th><td><input id="f-price" inputmode="decimal"></td></tr>
+      <tr><th><label for="f-time">Expected delivery</label></th><td><input id="f-time"></td></tr>
+      <tr><th><label for="f-date">Date</label></th><td><input id="f-date"></td></tr>
     </table></div>
+    <div class="fill-acts no-print"><button class="btn main" type="button" onclick="window.print()">Download PDF</button><a class="btn wa" id="send-wa" href="#" target="_blank" rel="noopener">Send on WhatsApp</a></div>
+    <p class="note no-print">Final price and delivery are confirmed by me before work starts.</p>
 
     <h2 id="s2"><span class="n">2</span>Scope of work</h2>
     <p>I will design, build and launch the project described above. What each package includes:</p>
@@ -241,5 +256,31 @@ th{background:var(--paper);font-weight:700;color:var(--indigo-deep)}
     <p class="foot">Last updated: October 2026 · Questions? WhatsApp <a href="https://wa.me/601151663724">+60 11-5166 3724</a> or email <a href="mailto:mrkbusiness8@gmail.com">mrkbusiness8@gmail.com</a></p>
   </main>
 </div>
+<script>
+const TYPES={"basic": ["Personal portfolio", "Company / factory profile", "Restaurant / caf\u00e9", "Clinic / professional service", "Shop showcase (order on WhatsApp)"], "standard": ["Product catalogue with admin panel", "News portal / blog", "Property / listings site", "School / training centre", "Hotel / homestay"], "premium": ["Online store with cart & payment", "Online courses (LMS)", "Membership & class booking", "Food ordering & delivery", "Appointment booking with deposit"]};
+const PRICE={basic:199,standard:499,premium:999};
+const TIME={basic:'About 1 week after first payment and content',standard:'2–3 weeks after first payment and content',premium:'3–5 weeks after first payment and content'};
+const $=id=>document.getElementById(id);
+function fillTypes(pkg,keep){const sel=$('f-type');sel.innerHTML=TYPES[pkg].concat(['Other / custom']).map(t=>`<option>${t}</option>`).join('');if(keep&&[...sel.options].some(o=>o.text===keep))sel.value=keep;}
+function onPkg(keepType){const k=$('f-pkg').value;fillTypes(k,keepType);$('f-price').value=PRICE[k];$('f-time').value=TIME[k];upd();}
+function upd(){
+  const t=`Hi Rasel, here are my project details:%0A`;
+  const lines=[['Client',$('f-name').value],['Package',$('f-pkg').selectedOptions[0].text],['Website type',$('f-type').value],['Pages and features',$('f-feat').value],['Price (USD)',$('f-price').value],['Delivery',$('f-time').value],['Date',$('f-date').value]];
+  const msg='Hi Rasel, here are my project details:\n'+lines.map(([a,b])=>a+': '+(b||'-')).join('\n')+'\n\nI have read the project agreement.';
+  $('send-wa').href='https://wa.me/601151663724?text='+encodeURIComponent(msg);
+}
+function grow(){const ta=$('f-feat');ta.style.height='auto';ta.style.height=ta.scrollHeight+'px';}
+const q=new URLSearchParams(location.search);
+const pk=(q.get('pkg')||'basic').toLowerCase();
+$('f-pkg').value=TYPES[pk]?pk:'basic';
+onPkg(q.get('type'));
+$('f-date').value=new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+$('f-pkg').addEventListener('change',()=>onPkg());
+['f-name','f-type','f-feat','f-price','f-time','f-date'].forEach(id=>$(id).addEventListener('input',upd));
+$('f-type').addEventListener('change',upd);
+$('f-feat').addEventListener('input',grow);
+window.addEventListener('beforeprint',grow);
+upd();
+</script>
 </body>
 </html>
