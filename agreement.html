@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Project Agreement — Rasel Studio</title>
+<meta name="description" content="How projects with Rasel Studio work: scope, payment, timeline, revisions, ownership and refunds.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2323265E'/><rect x='6' y='9' width='20' height='4' fill='%23F2A93B'/><rect x='6' y='19' width='20' height='4' fill='%23C4436B'/><rect x='11' y='5' width='4' height='22' fill='%23F7F6FB'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{--indigo:#23265E;--indigo-deep:#14163A;--indigo-soft:#E6E6F4;--marigold:#F2A93B;--madder:#C4436B;--weld:#7FA36B;--paper:#F7F6FB;--ink:#1A1B2E;--muted:#5B5D78;--line:#DCDBEA;
+--font:"Bricolage Grotesque","Segoe UI",system-ui,-apple-system,Roboto,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:1.05rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--indigo)}
+:focus-visible{outline:3px solid var(--marigold);outline-offset:3px;border-radius:4px}
+.top{position:sticky;top:0;z-index:10;background:rgba(247,246,251,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .in{max-width:1080px;margin:0 auto;padding:0 24px;height:66px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;text-decoration:none;color:var(--ink)}
+.acts{display:flex;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 18px;border-radius:999px;font:inherit;font-weight:600;font-size:.95rem;text-decoration:none;border:2px solid var(--indigo);cursor:pointer;background:none;color:var(--indigo)}
+.btn.main{background:var(--indigo);color:#fff}
+.btn.main:hover{background:var(--indigo-deep)}
+@media(max-width:560px){.btn.back{display:none}}
+
+.layout{max-width:1080px;margin:0 auto;padding:48px 24px 80px;display:grid;grid-template-columns:240px 1fr;gap:48px;align-items:start}
+.toc{position:sticky;top:96px;font-size:.93rem}
+.toc p{font-weight:700;margin:0 0 10px;color:var(--indigo-deep)}
+.toc ol{margin:0;padding:0 0 0 20px;color:var(--muted)}
+.toc li{margin:5px 0}
+.toc a{color:var(--muted);text-decoration:none}
+.toc a:hover{color:var(--indigo)}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.toc{display:none}}
+
+.doc{background:#fff;border:1px solid var(--line);border-radius:22px;padding:56px 60px}
+@media(max-width:700px){.doc{padding:30px 22px;border-radius:16px}}
+.doc-head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding-bottom:28px;border-bottom:3px solid var(--indigo);margin-bottom:34px;flex-wrap:wrap}
+.doc-head h1{font-size:clamp(2rem,4.5vw,2.8rem);line-height:1.05;letter-spacing:-.03em;margin:0 0 8px;color:var(--indigo-deep)}
+.doc-head p{margin:0;color:var(--muted)}
+.meta{text-align:right;font-size:.92rem;color:var(--muted)}
+.meta b{color:var(--ink)}
+.intro{background:var(--indigo-soft);border-radius:14px;padding:18px 22px;margin:0 0 36px;color:var(--indigo-deep)}
+h2{font-size:1.35rem;letter-spacing:-.015em;margin:40px 0 12px;color:var(--indigo-deep);display:flex;gap:12px;align-items:baseline;scroll-margin-top:90px}
+h2 .n{flex:none;display:inline-grid;place-items:center;width:30px;height:30px;border-radius:9px;background:var(--marigold);color:var(--indigo-deep);font-size:.95rem;font-weight:800}
+p{margin:0 0 12px}
+ul{margin:6px 0 14px;padding-left:22px}
+li{margin:5px 0}
+table{width:100%;border-collapse:collapse;margin:10px 0 16px;font-size:.98rem}
+th,td{text-align:left;padding:11px 14px;border:1px solid var(--line);vertical-align:top}
+th{background:var(--paper);font-weight:700;color:var(--indigo-deep)}
+.tw{overflow-x:auto}
+.note{font-size:.93rem;color:var(--muted)}
+.fill td:last-child{color:#9A9BB3;font-style:italic}
+.sign{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:22px}
+.sign div{border-top:1.5px solid var(--ink);padding-top:10px;font-size:.95rem}
+.sign span{display:block;color:var(--muted);font-size:.88rem;margin-top:30px;border-top:1px dashed var(--line);padding-top:6px}
+@media(max-width:560px){.sign{grid-template-columns:1fr}}
+.foot{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font-size:.9rem;color:var(--muted)}
+
+@media print{
+  @page{size:A4;margin:16mm 15mm}
+  body{background:#fff;font-size:10.5pt}
+  .top,.toc,.no-print{display:none!important}
+  .layout{display:block;padding:0;max-width:none}
+  .doc{border:0;padding:0;border-radius:0}
+  h2{break-after:avoid}
+  table,.sign,li{break-inside:avoid}
+  a{color:var(--ink);text-decoration:none}
+  .intro,th,h2 .n{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+
+<header class="top no-print">
+  <div class="in">
+    <a class="brand" href="index.html"><svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#23265E"/><rect x="6" y="9" width="20" height="4" fill="#F2A93B"/><rect x="6" y="19" width="20" height="4" fill="#C4436B"/><rect x="11" y="5" width="4" height="22" fill="#F7F6FB"/></svg>Rasel Studio</a>
+    <div class="acts">
+      <a class="btn back" href="index.html#pricing">Back to pricing</a>
+      <button class="btn main" onclick="window.print()">Download PDF</button>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <nav class="toc" aria-label="Contents">
+    <p>Contents</p>
+    <ol>
+      <li><a href="#s1">Project details</a></li>
+      <li><a href="#s2">Scope of work</a></li>
+      <li><a href="#s3">Price and payment</a></li>
+      <li><a href="#s4">Timeline</a></li>
+      <li><a href="#s5">What I need from you</a></li>
+      <li><a href="#s6">Revisions</a></li>
+      <li><a href="#s7">Preview and launch</a></li>
+      <li><a href="#s8">Ownership</a></li>
+      <li><a href="#s9">Support after launch</a></li>
+      <li><a href="#s10">Third-party costs</a></li>
+      <li><a href="#s11">Cancellation and refunds</a></li>
+      <li><a href="#s12">Confidentiality</a></li>
+      <li><a href="#s13">Limits of responsibility</a></li>
+      <li><a href="#s14">Agreement</a></li>
+    </ol>
+  </nav>
+
+  <main class="doc">
+    <div class="doc-head">
+      <div>
+        <h1>Project Agreement</h1>
+        <p>Website and app development · Rasel Studio</p>
+      </div>
+      <div class="meta">
+        <b>Md Rasel Khandaker</b><br>
+        Kuala Lumpur, Malaysia<br>
+        mrkbusiness8@gmail.com<br>
+        studio.mdraselkhandaker.com
+      </div>
+    </div>
+
+    <p class="intro">This agreement explains how we will work together, what you receive, and how payment works. It is written in plain language so there are no surprises. When you pay the first payment, you agree to these terms.</p>
+
+    <h2 id="s1"><span class="n">1</span>Project details</h2>
+    <p>These details are filled in for each project and confirmed by both of us before work starts.</p>
+    <div class="tw"><table class="fill">
+      <tr><th style="width:38%">Client name / business</th><td>To be filled in</td></tr>
+      <tr><th>Package</th><td>Basic / Standard / Premium</td></tr>
+      <tr><th>Website type and design</th><td>For example: Restaurant, Design 3</td></tr>
+      <tr><th>Pages and main features</th><td>To be filled in</td></tr>
+      <tr><th>Total price</th><td>USD</td></tr>
+      <tr><th>Expected delivery</th><td>Number of weeks after first payment and content</td></tr>
+    </table></div>
+
+    <h2 id="s2"><span class="n">2</span>Scope of work</h2>
+    <p>I will design, build and launch the project described above. What each package includes:</p>
+    <ul>
+      <li><strong>Basic:</strong> up to 5 pages, mobile-friendly design, contact form, map, WhatsApp button and basic Google SEO.</li>
+      <li><strong>Standard:</strong> everything in Basic, plus an admin panel so you can edit content yourself, search and filters, and hosting and database setup.</li>
+      <li><strong>Premium:</strong> everything in Standard, plus customer accounts, online payments, and an Android app published on Google Play.</li>
+    </ul>
+    <p>Anything not listed in the project details (for example extra pages, new features, logo design or writing your text) is extra work. I will always give you the price first, and only start once you agree.</p>
+
+    <h2 id="s3"><span class="n">3</span>Price and payment</h2>
+    <p>The price is fixed and agreed before work starts. Payments are made in stages:</p>
+    <div class="tw"><table>
+      <tr><th>Package</th><th>Starting price</th><th>Payment stages</th></tr>
+      <tr><td>Basic</td><td>from $199</td><td>50% to start · 50% before launch</td></tr>
+      <tr><td>Standard</td><td>from $499</td><td>50% to start · 50% before launch</td></tr>
+      <tr><td>Premium</td><td>from $999</td><td>40% to start · 30% when the website is finished · 30% before the app goes live</td></tr>
+    </table></div>
+    <ul>
+      <li>Work starts after the first payment is received.</li>
+      <li>You can pay by Wise, PayPal, or bank transfer (DuitNow for clients in Malaysia). I send an invoice for every payment.</li>
+      <li>If you pay by PayPal, PayPal's fee is added to the invoice.</li>
+      <li>Each payment is due within 7 days of the invoice.</li>
+    </ul>
+
+    <h2 id="s4"><span class="n">4</span>Timeline</h2>
+    <ul>
+      <li>The timeline starts when I have received both the first payment and your content (see section 5).</li>
+      <li>Typical delivery: Basic about 1 week, Standard 2–3 weeks, Premium 3–5 weeks.</li>
+      <li>If content or feedback arrives late, the delivery date moves by the same number of days.</li>
+      <li>Google Play reviews new apps on its own schedule. App approval time is outside my control.</li>
+    </ul>
+
+    <h2 id="s5"><span class="n">5</span>What I need from you</h2>
+    <ul>
+      <li>Your text, logo, photos, prices and contact details, ready to use.</li>
+      <li>Feedback within 7 days each time I share a design or preview.</li>
+      <li>One person who can make decisions for your business.</li>
+      <li>Your own domain and hosting accounts, in your name. I can help you set them up.</li>
+      <li>For Premium: your own Google Play developer account and payment gateway account (PayPal, Stripe or similar), in your name.</li>
+    </ul>
+    <p>You confirm that you have the right to use all content you send me (text, images, logos).</p>
+
+    <h2 id="s6"><span class="n">6</span>Revisions</h2>
+    <ul>
+      <li>Basic includes 2 rounds of changes. Standard and Premium include 3 rounds.</li>
+      <li>One round means one list of changes sent together, not one change at a time.</li>
+      <li>Changes after the included rounds, or changes to something already approved, are quoted as extra work.</li>
+    </ul>
+
+    <h2 id="s7"><span class="n">7</span>Preview and launch</h2>
+    <ul>
+      <li>While I build, you can follow progress on a private preview link.</li>
+      <li>When you approve the final preview and the final payment is received, I launch the project on your domain and hand over all logins, admin access and files.</li>
+      <li>Until the final payment, the project stays on my preview link.</li>
+    </ul>
+
+    <h2 id="s8"><span class="n">8</span>Ownership</h2>
+    <ul>
+      <li>After full payment, you own the website, its design and your content.</li>
+      <li>Open-source tools, fonts and libraries used in the project stay under their own free licences.</li>
+      <li>I may show the finished project in my portfolio. If you prefer that I don't, tell me and I won't.</li>
+    </ul>
+
+    <h2 id="s9"><span class="n">9</span>Support after launch</h2>
+    <ul>
+      <li>For 30 days after launch, I fix any errors in the work I delivered, free of charge.</li>
+      <li>This covers things not working as agreed. New features or design changes are extra work.</li>
+      <li>After 30 days, ongoing updates and support are available at a price we agree.</li>
+    </ul>
+
+    <h2 id="s10"><span class="n">10</span>Third-party costs</h2>
+    <p>These are paid by you, directly to the provider, so the accounts always belong to you:</p>
+    <ul>
+      <li>Domain name and hosting or server.</li>
+      <li>Google Play developer account (one-time fee charged by Google).</li>
+      <li>Payment gateway fees (PayPal, Stripe and similar take a small fee on each sale).</li>
+      <li>Any paid themes, plugins, images or services you choose to use.</li>
+    </ul>
+
+    <h2 id="s11"><span class="n">11</span>Cancellation and refunds</h2>
+    <ul>
+      <li><strong>Before I start work:</strong> you can cancel and receive a full refund of the first payment.</li>
+      <li><strong>After work has started:</strong> the first payment is not refundable, because it covers work already done.</li>
+      <li>Payments for stages already completed are not refundable.</li>
+      <li>If I am unable to finish the project, I refund payments for any stage I have not delivered.</li>
+      <li>If I hear nothing from you for 30 days, the project is paused. After 60 days without contact, it is closed and payments made so far cover the work done.</li>
+    </ul>
+
+    <h2 id="s12"><span class="n">12</span>Confidentiality</h2>
+    <p>I keep your business information, passwords and customer data private, and use them only for your project. After handover, I recommend you change any passwords I used.</p>
+
+    <h2 id="s13"><span class="n">13</span>Limits of responsibility</h2>
+    <ul>
+      <li>I am not responsible for problems caused by third-party services, such as hosting outages, payment gateway issues or Google Play decisions.</li>
+      <li>I am not responsible for changes made to the site by you or another person after handover.</li>
+      <li>My total responsibility for any claim is limited to the amount you have paid for the project.</li>
+    </ul>
+
+    <h2 id="s14"><span class="n">14</span>Agreement</h2>
+    <p>By paying the first payment, you confirm that you have read and agree to this agreement. If you would like a signed copy, both of us can sign below.</p>
+    <div class="sign">
+      <div><b>Client</b><span>Name, signature and date</span></div>
+      <div><b>Md Rasel Khandaker</b> · Rasel Studio<span>Signature and date</span></div>
+    </div>
+
+    <p class="foot">Last updated: October 2026 · Questions? WhatsApp <a href="https://wa.me/601151663724">+60 11-5166 3724</a> or email <a href="mailto:mrkbusiness8@gmail.com">mrkbusiness8@gmail.com</a></p>
+  </main>
+</div>
+</body>
+</html>
