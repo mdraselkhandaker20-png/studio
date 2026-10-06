@@ -118,6 +118,14 @@ a{color:inherit}
 }
 @media(max-width:520px){.trust{grid-template-columns:1fr;gap:10px}.trust li{display:flex;gap:10px;align-items:baseline}.stage{height:340px}.float{padding:9px 12px}.f2{display:none}}
 
+/* What you see band */
+.wysiwyg-band{padding:0;margin-top:-40px;position:relative;z-index:2}
+.wy-in{display:flex;align-items:center;gap:22px;background:var(--indigo-deep);color:#fff;border-radius:22px;padding:22px 26px;box-shadow:0 24px 50px -28px rgba(20,22,58,.6)}
+.wy-ic{flex:none;width:56px;height:56px;border-radius:16px;background:var(--marigold);display:grid;place-items:center}
+.wy-t{flex:1;line-height:1.45}.wy-t b{display:block;font-size:1.3rem;letter-spacing:-.01em;margin-bottom:2px}.wy-t span{color:#C9CAE6}
+.wy-in .btn{flex:none}
+@media(max-width:760px){.wy-in{flex-direction:column;align-items:flex-start;gap:14px}.wy-in .btn{width:100%}}
+.services{padding-top:120px}
 /* ---------- Sections ---------- */
 section{padding:96px 0}
 .head{max-width:640px;margin-bottom:52px}
@@ -292,6 +300,7 @@ footer a{color:var(--muted)}
 .pk-top{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:start}
 .pk-top h1{font-size:clamp(2.4rem,5vw,3.6rem);line-height:1.05;letter-spacing:-.03em;margin:0 0 14px;color:var(--indigo-deep)}
 .pk-top .lead{font-size:1.2rem;color:var(--muted);margin:0}
+.pk-top .wy{margin-top:18px;background:#FFF4D6;border-left:4px solid var(--marigold);border-radius:12px;padding:14px 18px;color:#4A3A10;font-size:1.02rem}
 .pk-box{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px 28px}
 .pk-box .price{font-size:2.2rem;font-weight:800;letter-spacing:-.03em;color:var(--indigo)}
 .pk-box ul{list-style:none;padding:0;margin:14px 0 0}
@@ -329,8 +338,8 @@ footer a{color:var(--muted)}
 <nav class="nav" aria-label="Main"><div class="wrap"><a href="index.html" class="brand"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#23265E"/><rect x="6" y="9" width="20" height="4" fill="#F2A93B"/><rect x="6" y="19" width="20" height="4" fill="#C4436B"/><rect x="11" y="5" width="4" height="22" fill="#F7F6FB"/></svg>Rasel Studio</a>
 <ul id="menu"><li><a href="index.html#services">Services</a></li><li><a href="index.html#work">Work</a></li><li class="dd"><a href="index.html#pricing" aria-haspopup="true">Examples</a><div class="dd-menu"><a href="basic.html"><img src="shots/thumbs/basic-company.jpg" alt=""><span><b>Basic</b><small>5 business websites</small></span></a><a href="standard.html"><img src="shots/thumbs/standard-property.jpg" alt=""><span><b>Standard</b><small>5 sites with admin panel</small></span></a><a href="premium.html"><img src="shots/thumbs/premium-shop.jpg" alt=""><span><b>Premium</b><small>5 sites with payments + app</small></span></a></div></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="agreement.html">Agreement</a></li><li><a href="index.html#about">About</a></li><li class="m-cta"><a href="index.html#contact" class="btn btn-main">Start a project</a></li></ul><a href="index.html#contact" class="btn btn-main d-cta">Start a project</a><button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span><span></span></button></div></nav>
 <header class="pk-head"><div class="wrap"><div class="pk-tabs" aria-label="Packages"><a href="basic.html" aria-current="page">Basic</a><a href="standard.html">Standard</a><a href="premium.html">Premium</a><a href="index.html#pricing">← Back to pricing</a></div>
-<div class="pk-top"><div><h1>Basic package: 5 example designs</h1><p class="lead">A clean, fast website to get your business online. Look through the designs below, open any of them live, and choose the one closest to what you need. Your site will use your own name, photos and colours.</p></div>
-<div class="pk-box"><div class="price">from $199</div><div style="color:var(--muted)">About 1 week</div><ul><li>Up to 5 pages</li><li>Mobile-friendly design</li><li>Contact form, map and WhatsApp button</li><li>Basic Google SEO</li></ul></div></div></div></header>
+<div class="pk-top"><div><h1>Basic package: 5 example designs</h1><p class="lead">A clean, fast website to get your business online. Look through the designs below, open any of them live, and choose the one closest to what you need. </p><p class="wy"><strong>What you see is what you get.</strong> Your website or app is built on the design you choose here, with the same layout and features, using your own name, logo, photos and colours.</p></div>
+<div class="pk-box"><div class="price">from $199</div><div style="color:var(--muted)">About 1 week</div><ul><li>Up to 5 pages</li><li>Mobile-friendly design</li><li>Contact form, map and WhatsApp button</li><li>Basic Google SEO</li><li>Domain (1st year) + hosting (1st month)</li></ul></div></div></div></header>
 <main class="wrap"><article class="ex" id="basic-portfolio"><div class="shotwrap"><div class="bar"><i></i><i></i><i></i><span>Nadia Rahman Photography</span></div>
 <div class="viewport" tabindex="0" aria-label="Full-page screenshot of Nadia Rahman Photography, scroll to see more"><img src="shots/basic-portfolio.jpg" alt="Full desktop screenshot of the Nadia Rahman Photography example website" loading="lazy"></div>
 <div class="hint">Scroll inside the frame to see the whole page</div></div>
@@ -380,4 +389,15 @@ document.querySelectorAll('[data-choose]').forEach(b=>b.onclick=()=>{
 document.getElementById('md-x').onclick=()=>md.hidden=true;
 (function(){const b=document.querySelector('.burger'),m=document.getElementById('menu');const set=o=>{m.classList.toggle('open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu')};b.addEventListener('click',()=>set(!m.classList.contains('open')));m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>set(false)));})();
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){lb.hidden=true;md.hidden=true}});
-</script></body></html>
+</script><a class="wa-float" href="https://wa.me/601151663724?text=Hi%20Rasel%2C%20I%27m%20interested%20in%20a%20website." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path fill="#fff" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.2-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.8-3.8-1.8-6 0-5.9 4.9-10.6 11-10.6S27 9.9 27 15.8s-4.9 10.6-11 10.6zm6-7.9c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.7-1.6-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 2-.8 2.2-1.6.3-.8.3-1.4.2-1.6-.1-.1-.3-.2-.6-.3z"/></svg>
+  <span>Chat on WhatsApp</span>
+</a>
+<style>
+.wa-float{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:50;display:flex;align-items:center;gap:10px;background:#1F9D55;color:#fff;text-decoration:none;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:700;font-size:.98rem;padding:12px 20px 12px 14px;border-radius:999px;box-shadow:0 14px 30px -10px rgba(16,90,48,.6);transition:transform .2s,background .2s}
+.wa-float:hover{background:#178A49;transform:translateY(-2px)}
+.wa-float:focus-visible{outline:3px solid #F2A93B;outline-offset:3px}
+@media(max-width:600px){.wa-float{padding:14px;border-radius:50%}.wa-float span{display:none}}
+@media print{.wa-float{display:none!important}}
+</style>
+</body></html>

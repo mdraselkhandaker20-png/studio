@@ -61,6 +61,7 @@ th{background:var(--paper);font-weight:700;color:var(--indigo-deep)}
 .fill-acts{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 8px}
 .btn.wa{background:#1F9D55;border-color:#1F9D55;color:#fff}
 .print-only{display:none}
+.wysiwyg{background:#FFF4D6;border-left:4px solid var(--marigold);border-radius:10px;padding:14px 18px;color:#4A3A10}
 .sign{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:22px}
 .sign div{border-top:1.5px solid var(--ink);padding-top:10px;font-size:.95rem}
 .sign span{display:block;color:var(--muted);font-size:.88rem;margin-top:30px;border-top:1px dashed var(--line);padding-top:6px}
@@ -80,6 +81,8 @@ th{background:var(--paper);font-weight:700;color:var(--indigo-deep)}
   .fill input,.fill select,.fill textarea{border:0;border-bottom:1px solid #bbb;border-radius:0;background:none;padding:2px 0;-webkit-appearance:none;appearance:none}
   .fill textarea{resize:none;overflow:hidden}
   .fill input::placeholder,.fill textarea::placeholder{color:transparent}
+  .wa-float{display:none!important}
+  .wysiwyg{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .intro,th,h2 .n{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 }
 </style>
@@ -155,6 +158,8 @@ th{background:var(--paper);font-weight:700;color:var(--indigo-deep)}
       <li><strong>Standard:</strong> everything in Basic, plus an admin panel so you can edit content yourself, search and filters, and hosting and database setup.</li>
       <li><strong>Premium:</strong> everything in Standard, plus customer accounts, online payments, and an Android app published on Google Play.</li>
     </ul>
+    <p class="wysiwyg"><strong>What you see is what you get.</strong> Your website or app is built on the example design you choose, with the same layout, sections and features, using your own name, logo, photos, text and colours.</p>
+    <p>Every package includes the domain for the first year and hosting for the first month (see section 10).</p>
     <p>Anything not listed in the project details (for example extra pages, new features, logo design or writing your text) is extra work. I will always give you the price first, and only start once you agree.</p>
 
     <h2 id="s3"><span class="n">3</span>Price and payment</h2>
@@ -185,7 +190,7 @@ th{background:var(--paper);font-weight:700;color:var(--indigo-deep)}
       <li>Your text, logo, photos, prices and contact details, ready to use.</li>
       <li>Feedback within 7 days each time I share a design or preview.</li>
       <li>One person who can make decisions for your business.</li>
-      <li>Your domain and hosting, in your name. You can buy them yourself, or I can buy and set them up for you (see section 10).</li>
+      <li>The name you want for your domain (web address). I buy the domain and hosting for you (see section 10).</li>
       <li>For Premium: your own Google Play developer account and payment gateway account (PayPal, Stripe or similar), in your name.</li>
     </ul>
     <p>You confirm that you have the right to use all content you send me (text, images, logos).</p>
@@ -200,7 +205,7 @@ th{background:var(--paper);font-weight:700;color:var(--indigo-deep)}
     <h2 id="s7"><span class="n">7</span>Preview and launch</h2>
     <ul>
       <li>While I build, you can follow progress on a private preview link.</li>
-      <li>When you approve the final preview and the final payment is received, I launch the project on your domain and hand over all logins, admin access and files, including the domain and hosting accounts if I bought them for you.</li>
+      <li>When you approve the final preview and the final payment is received, I launch the project on your domain and hand over all logins, admin access and files, including the domain and hosting (see section 10).</li>
       <li>Until the final payment, the project stays on my preview link.</li>
     </ul>
 
@@ -218,23 +223,26 @@ th{background:var(--paper);font-weight:700;color:var(--indigo-deep)}
       <li>After 30 days, ongoing updates and support are available at a price we agree.</li>
     </ul>
 
-    <h2 id="s10"><span class="n">10</span>Domain, hosting and other costs</h2>
-    <p>The website needs a domain name (your web address) and hosting (the server it runs on). These are paid to the provider, not to me, and they are separate from my price.</p>
+    <h2 id="s10"><span class="n">10</span>Domain and hosting</h2>
+    <p>Every website needs a domain name (your web address) and hosting (the server it runs on). Both are included in your package at the start.</p>
+    <div class="tw"><table>
+      <tr><th style="width:24%"></th><th>Included in your package</th><th>After that</th></tr>
+      <tr><th>Domain</th><td>The <strong>first year</strong></td><td>You renew it <strong>every year</strong></td></tr>
+      <tr><th>Hosting</th><td>The <strong>first month</strong></td><td>You pay it <strong>every month</strong></td></tr>
+    </table></div>
     <ul>
-      <li><strong>Domain and hosting renew every year.</strong> The first year is bought when the project starts. After that, the provider charges again each year to keep them active.</li>
-      <li><strong>Renewals are your responsibility.</strong> If the domain or hosting is not renewed, the website goes offline, and an expired domain can be bought by someone else.</li>
-      <li>I recommend turning on <strong>auto-renew</strong> with your own card, so you never miss a renewal.</li>
-      <li><strong>Two ways to set them up:</strong>
-        <ul>
-          <li>You buy them in your own name and give me access to set them up, or</li>
-          <li>I buy them for you at the provider's actual price (added to your invoice with the receipt), set everything up, and transfer the accounts to you at launch.</li>
-        </ul>
-      </li>
-      <li>Either way, the domain and hosting are registered to you, and after launch you control and renew them yourself.</li>
+      <li>This covers a standard domain (such as .com, .net or .my) and a hosting plan suited to your package. If you want a premium domain name or a larger server, the difference is quoted first.</li>
+      <li>If the domain or hosting is not paid on time, the website goes offline, and an expired domain can be bought by someone else. I recommend turning on <strong>auto-renew</strong> with your own card.</li>
     </ul>
-    <p>Other costs you pay directly, if your project needs them:</p>
+    <p><strong>How you receive them.</strong> We choose one of these before work starts:</p>
     <ul>
-      <li>Google Play developer account (one-time fee charged by Google).</li>
+      <li><strong>Option A:</strong> I buy them in my account, build and launch the website, then transfer the domain and hosting to your own account at handover.</li>
+      <li><strong>Option B:</strong> I buy them directly in an account in your name from the start, and you change the password and payment card at handover.</li>
+    </ul>
+    <p>Either way, after launch the domain and hosting belong to you, and all renewals and monthly payments are made from your own account.</p>
+    <p><strong>Other costs</strong>, paid by you only if your project needs them:</p>
+    <ul>
+      <li>Google Play developer account (one-time fee charged by Google, in your name).</li>
       <li>Payment gateway fees (PayPal, Stripe and similar take a small fee on each sale).</li>
       <li>Any paid themes, plugins, images or services you choose to use.</li>
     </ul>
@@ -294,5 +302,16 @@ $('f-feat').addEventListener('input',grow);
 window.addEventListener('beforeprint',grow);
 upd();
 </script>
+<a class="wa-float" href="https://wa.me/601151663724?text=Hi%20Rasel%2C%20I%27m%20interested%20in%20a%20website." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path fill="#fff" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.2-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.8-3.8-1.8-6 0-5.9 4.9-10.6 11-10.6S27 9.9 27 15.8s-4.9 10.6-11 10.6zm6-7.9c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.7-1.6-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 2-.8 2.2-1.6.3-.8.3-1.4.2-1.6-.1-.1-.3-.2-.6-.3z"/></svg>
+  <span>Chat on WhatsApp</span>
+</a>
+<style>
+.wa-float{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:50;display:flex;align-items:center;gap:10px;background:#1F9D55;color:#fff;text-decoration:none;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:700;font-size:.98rem;padding:12px 20px 12px 14px;border-radius:999px;box-shadow:0 14px 30px -10px rgba(16,90,48,.6);transition:transform .2s,background .2s}
+.wa-float:hover{background:#178A49;transform:translateY(-2px)}
+.wa-float:focus-visible{outline:3px solid #F2A93B;outline-offset:3px}
+@media(max-width:600px){.wa-float{padding:14px;border-radius:50%}.wa-float span{display:none}}
+@media print{.wa-float{display:none!important}}
+</style>
 </body>
 </html>

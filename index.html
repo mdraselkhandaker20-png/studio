@@ -124,6 +124,14 @@ a{color:inherit}
 }
 @media(max-width:520px){.trust{grid-template-columns:1fr;gap:10px}.trust li{display:flex;gap:10px;align-items:baseline}.stage{height:340px}.float{padding:9px 12px}.f2{display:none}}
 
+/* What you see band */
+.wysiwyg-band{padding:0;margin-top:-40px;position:relative;z-index:2}
+.wy-in{display:flex;align-items:center;gap:22px;background:var(--indigo-deep);color:#fff;border-radius:22px;padding:22px 26px;box-shadow:0 24px 50px -28px rgba(20,22,58,.6)}
+.wy-ic{flex:none;width:56px;height:56px;border-radius:16px;background:var(--marigold);display:grid;place-items:center}
+.wy-t{flex:1;line-height:1.45}.wy-t b{display:block;font-size:1.3rem;letter-spacing:-.01em;margin-bottom:2px}.wy-t span{color:#C9CAE6}
+.wy-in .btn{flex:none}
+@media(max-width:760px){.wy-in{flex-direction:column;align-items:flex-start;gap:14px}.wy-in .btn{width:100%}}
+.services{padding-top:120px}
 /* ---------- Sections ---------- */
 section{padding:96px 0}
 .head{max-width:640px;margin-bottom:52px}
@@ -347,6 +355,16 @@ footer a{color:var(--muted)}
   </div>
 </header>
 
+<section class="wysiwyg-band" aria-label="What you see is what you get">
+  <div class="wrap">
+    <div class="wy-in">
+      <div class="wy-ic" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#14163A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div>
+      <div class="wy-t"><b>What you see is what you get.</b><span>Pick any of the 15 example designs. Your website or app is built on that same design, with your own name, logo, photos and colours.</span></div>
+      <a class="btn btn-gold" href="#services">Browse the designs</a>
+    </div>
+  </div>
+</section>
+
 <section class="services" id="services">
   <div class="wrap">
     <div class="head">
@@ -482,7 +500,7 @@ footer a{color:var(--muted)}
         <div class="price"><small>from </small>$199</div>
         <div class="time">About 1 week</div>
         <a class="peek" href="basic.html"><span class="fan"><img src="shots/thumbs/basic-portfolio.jpg" alt=""><img src="shots/thumbs/basic-company.jpg" alt=""><img src="shots/thumbs/basic-restaurant.jpg" alt=""></span><span class="peek-t"><b>See 5 Basic designs</b><small>Scroll through full example websites</small></span></a>
-        <ul><li>Up to 5 pages</li><li>Mobile-friendly design</li><li>Contact form, map + WhatsApp</li><li>Basic Google SEO</li></ul>
+        <ul><li>Up to 5 pages</li><li>Mobile-friendly design</li><li>Contact form, map + WhatsApp</li><li>Basic Google SEO</li><li>Domain (1st year) + hosting (1st month)</li></ul>
         <p class="good"><strong>Good for:</strong> portfolio, company or factory profile, restaurant, clinic, shop showcase</p>
         <a href="#contact" class="btn btn-line">Choose Basic</a>
       </div>
@@ -493,7 +511,7 @@ footer a{color:var(--muted)}
         <div class="price"><small>from </small>$499</div>
         <div class="time">2–3 weeks</div>
         <a class="peek" href="standard.html"><span class="fan"><img src="shots/thumbs/standard-catalogue.jpg" alt=""><img src="shots/thumbs/standard-property.jpg" alt=""><img src="shots/thumbs/standard-hotel.jpg" alt=""></span><span class="peek-t"><b>See 5 Standard designs</b><small>Scroll through full example websites</small></span></a>
-        <ul><li>Everything in Basic</li><li>Admin panel to edit content</li><li>Search and filters</li><li>Hosting and database setup</li></ul>
+        <ul><li>Everything in Basic</li><li>Admin panel to edit content</li><li>Search and filters</li><li>Domain (1st year) + hosting (1st month)</li></ul>
         <p class="good"><strong>Good for:</strong> product catalogue, news or blog, property listings, school, hotel</p>
         <a href="#contact" class="btn btn-gold">Choose Standard</a>
       </div>
@@ -503,12 +521,12 @@ footer a{color:var(--muted)}
         <div class="price"><small>from </small>$999</div>
         <div class="time">3–5 weeks</div>
         <a class="peek" href="premium.html"><span class="fan"><img src="shots/thumbs/premium-shop.jpg" alt=""><img src="shots/thumbs/premium-courses.jpg" alt=""><img src="shots/thumbs/premium-salon.jpg" alt=""></span><span class="peek-t"><b>See 5 Premium designs</b><small>Scroll through full example websites</small></span></a>
-        <ul><li>Everything in Standard</li><li>Customer accounts and login</li><li>Online payments</li><li>Android app on Google Play</li></ul>
+        <ul><li>Everything in Standard</li><li>Customer accounts and login</li><li>Online payments</li><li>Android app on Google Play</li><li>Domain (1st year) + server (1st month)</li></ul>
         <p class="good"><strong>Good for:</strong> online store, online courses, gym membership, food ordering, appointment booking</p>
         <a href="#contact" class="btn btn-line">Choose Premium</a>
       </div>
     </div>
-    <p class="plans-note">Hosting and domain costs are paid directly by you, so you always own your site. <a class="link" href="agreement.html">Read the project agreement</a> to see how payment, revisions and refunds work.</p>
+    <p class="plans-note"><strong>Domain for the first year and hosting for the first month are included.</strong> After that, you renew the domain yearly and pay hosting monthly from your own account, so you always own your site. <a class="link" href="agreement.html">Read the project agreement</a> to see how payment, revisions and refunds work.</p>
   </div>
 </section>
 
@@ -578,5 +596,16 @@ document.getElementById('yr').textContent = new Date().getFullYear();
   document.addEventListener('keydown',e=>{if(e.key==='Escape')set(false)});
 })();
 </script>
+<a class="wa-float" href="https://wa.me/601151663724?text=Hi%20Rasel%2C%20I%27m%20interested%20in%20a%20website." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path fill="#fff" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.2-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.8-3.8-1.8-6 0-5.9 4.9-10.6 11-10.6S27 9.9 27 15.8s-4.9 10.6-11 10.6zm6-7.9c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.7-1.6-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 2-.8 2.2-1.6.3-.8.3-1.4.2-1.6-.1-.1-.3-.2-.6-.3z"/></svg>
+  <span>Chat on WhatsApp</span>
+</a>
+<style>
+.wa-float{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:50;display:flex;align-items:center;gap:10px;background:#1F9D55;color:#fff;text-decoration:none;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:700;font-size:.98rem;padding:12px 20px 12px 14px;border-radius:999px;box-shadow:0 14px 30px -10px rgba(16,90,48,.6);transition:transform .2s,background .2s}
+.wa-float:hover{background:#178A49;transform:translateY(-2px)}
+.wa-float:focus-visible{outline:3px solid #F2A93B;outline-offset:3px}
+@media(max-width:600px){.wa-float{padding:14px;border-radius:50%}.wa-float span{display:none}}
+@media print{.wa-float{display:none!important}}
+</style>
 </body>
 </html>
